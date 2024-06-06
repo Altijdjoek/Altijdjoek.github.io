@@ -4,15 +4,15 @@
     padding: 20px;
     text-align: center;
 }
- 
+
 h2 {
     margin-bottom: 10px;
 }
- 
+
 input[type="file"] {
     display: none;
 }
- 
+
 .inputfile + label {
     font-size: 1.25em;
     font-weight: 700;
@@ -23,7 +23,7 @@ input[type="file"] {
     cursor: pointer;
     display: inline-block;
 }
- 
+
 button {
     margin-top: 10px;
     padding: 10px 20px;
@@ -35,17 +35,25 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
- 
+
 ul {
     list-style-type: none;
     padding: 0;
 }
- 
+
 li {
     margin-top: 10px;
 }
- 
+
 a {
     text-decoration: none;
     color: #007bff;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    border-top: 5px solid grey; /* Voeg deze regel toe */
 }
