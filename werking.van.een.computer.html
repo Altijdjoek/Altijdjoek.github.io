@@ -16,15 +16,25 @@
         padding: 1em 0;
         text-align: center;
         border-top: 5px solid grey;
+        animation: headerAnimation 2s ease-in-out;
+    }
+    @keyframes headerAnimation {
+        from {background-color: #3e8e41;}
+        to {background-color: #4CAF50;}
     }
     nav {
         background-color: #333;
+        overflow: hidden;
     }
     nav ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
-        overflow: hidden;
+        animation: navAnimation 1s ease-in-out;
+    }
+    @keyframes navAnimation {
+        from {margin-left: -100px;}
+        to {margin-left: 0;}
     }
     nav ul li {
         float: left;
@@ -35,6 +45,7 @@
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
+        transition: background-color 0.3s;
     }
     nav ul li a:hover {
         background-color: #111;
@@ -53,7 +64,16 @@
     }
     section {
         margin-bottom: 20px;
+        opacity: 0;
+        animation: fadeIn 1s forwards;
     }
+    @keyframes fadeIn {
+        to {opacity: 1;}
+    }
+    section:nth-child(1) { animation-delay: 0.5s; }
+    section:nth-child(2) { animation-delay: 1s; }
+    section:nth-child(3) { animation-delay: 1.5s; }
+    section:nth-child(4) { animation-delay: 2s; }
 </style>
 </head>
 <body>
