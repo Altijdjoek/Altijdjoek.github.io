@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Werking van de Computer</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background-color: #4CAF50;
+        color: white;
+        padding: 1em 0;
+        text-align: center;
+        border-top: 5px solid grey;
+    }
+    nav {
+        background-color: #333;
+    }
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    nav ul li {
+        float: left;
+    }
+    nav ul li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    nav ul li a:hover {
+        background-color: #111;
+    }
+    .main {
+        padding: 20px;
+    }
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    section {
+        margin-bottom: 20px;
+    }
+</style>
+</head>
+<body>
+<header>
+    <h1>Werking van de Computer</h1>
+</header>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="persoonlijke.info.html">Persoonlijke Informatie</a></li>
+    </ul>
+</nav>
+<div class="main">
+    <section>
+        <h2>Invoer</h2>
+        <p>Invoer verwijst naar alle gegevens en instructies die de computer ontvangt van invoerapparaten zoals toetsenborden, muizen, scanners, enz. Het is het eerste proces in de cyclus van computerwerking.</p>
+    </section>
+    <section>
+        <h2>Verwerking</h2>
+        <p>Verwerking is het kernproces waarbij de CPU (Central Processing Unit) de ingevoerde gegevens interpreteert en berekeningen uitvoert of instructies volgt om een resultaat te genereren.</p>
+    </section>
+    <section>
+        <h2>Uitvoer</h2>
+        <p>Uitvoer is het proces waarbij de computer resultaten of gegevens levert aan uitvoerapparaten zoals monitoren, printers, luidsprekers, enz. Het is de laatste stap in de verwerking van gegevens.</p>
+    </section>
+    <section>
+        <h2>Opslag</h2>
+        <p>Opslag verwijst naar het bewaren van gegevens en instructies op opslagmedia zoals harde schijven, SSD's, USB-sticks, en cloudopslag. Het stelt de computer in staat om gegevens voor lange termijn op te slaan en op te halen.</p>
+    </section>
+</div>
+<footer>
+    <p>&copy; 2024 Werking van de Computer. Alle rechten voorbehouden.</p>
+</footer>
+</body>
+</html>
