@@ -74,8 +74,7 @@
         animation: fadeInVideo 1.5s forwards;
     }
     .video-container video {
-        width: 100%;
-        max-width: 450px; /* Ensure video scales well on different screens */
+        width: 450px; /* 1.5 times the original 300px width */
         height: auto;
         border-radius: 8px;
     }
@@ -95,17 +94,17 @@
 </head>
 <body>
 <header>
-    <h1>Welkom op mijn Website</h1>
+<h1>Welkom op mijn Website</h1>
 </header>
 <nav>
-    <ul>
+<ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="persoonlijke.info.html">Persoonlijke Informatie</a></li>
         <li><a href="Binairstelsel.html">Binair Stelsel</a></li>
         <li><a href="kleurmodellen.html">Kleurmodellen</a></li>
-        <li><a href="werking.van.de.computer.html">Werking van de Computer</a></li>
+        <li><a href="werking.van.de.computer.html">werking van de computer</a></li>
         <li><a href="Compressietechnieken.html">Compressietechnieken</a></li>
-    </ul>
+</ul>
 </nav>
 <div class="main">
     <div class="content">
@@ -119,11 +118,8 @@
         </ul>
         <div class="video-container">
             <video controls>
-                <!-- Zorg ervoor dat dit pad correct is -->
-                <source src="https://altijdjoek.github.io/movie.mp4" type="video/mp4">
-                <!-- Test met een openbare video-URL -->
-                <!-- <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"> -->
-                Uw browser ondersteunt het video-element niet.
+                <source src="Video1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
             </video>
         </div>
     </div>
