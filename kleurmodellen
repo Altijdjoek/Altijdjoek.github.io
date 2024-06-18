@@ -97,10 +97,10 @@
 </header>
 <nav>
     <ul>
-        <li><a href="#rgb">RGB</a></li>
-        <li><a href="#cmyk">CMY-K</a></li>
-        <li><a href="#pixels">Pixels</a></li>
-        <li><a href="#resolutie">Resolutie</a></li>
+<li><a href="index.html">Home</a></li>
+<li><a href="persoonlijke.info.html">Persoonlijke informatie</a></li>
+<li><a href="binair.stelsel.html">Binair Stelsel</a></li>
+<li><a href="kleurmodellen">kleurmodellen</a></li>
     </ul>
 </nav>
 <div class="main">
