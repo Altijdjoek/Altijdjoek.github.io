@@ -58,6 +58,11 @@
         from {opacity: 0;}
         to {opacity: 1;}
     }
+    .content {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: left;
+    }
     .image-container {
         text-align: center;
         margin-top: 20px;
@@ -72,14 +77,14 @@
         color: white;
         text-align: center;
         padding: 10px 0;
-        position: fixed;
-        bottom: 0;
+        position: relative;
         width: 100%;
     }
-    .content {
-        max-width: 800px;
-        margin: 0 auto;
-        text-align: left;
+    .footer-image {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+        animation: fadeInImage 1.5s forwards;
     }
 </style>
 </head>
@@ -105,13 +110,11 @@
             <li><strong>Binair stelsel:</strong> Begrijp de basis van het binaire stelsel en hoe het wordt gebruikt in de computerwereld.</li>
             <li><strong>Persoonlijke informatie:</strong> Lees meer over mij en mijn achtergrond, inclusief mijn opleiding, werk en hobby's.</li>
         </ul>
-        <div class="image-container">
-            <img src="Joekfoto.jpg" alt="Voorbeeldafbeelding" width="300">
-        </div>
     </div>
 </div>
 <footer>
-<p>&copy; 2024 Mijn Website. Alle rechten voorbehouden.</p>
+    <img src="afbeelding2.jpg" alt="Prachtig uitzicht" class="footer-image">
+    <p>&copy; 2024 Mijn Website. Alle rechten voorbehouden.</p>
 </footer>
 </body>
 </html>
