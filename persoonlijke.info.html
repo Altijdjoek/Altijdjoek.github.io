@@ -15,6 +15,11 @@
         color: white;
         padding: 1em 0;
         text-align: center;
+        animation: headerAnimation 2s ease-in-out;
+    }
+    @keyframes headerAnimation {
+        from {background-color: #3e8e41;}
+        to {background-color: #4CAF50;}
     }
     nav {
         background-color: #333;
@@ -24,6 +29,11 @@
         margin: 0;
         padding: 0;
         overflow: hidden;
+        animation: navAnimation 1s ease-in-out;
+    }
+    @keyframes navAnimation {
+        from {margin-left: -100px;}
+        to {margin-left: 0;}
     }
     nav ul li {
         float: left;
@@ -34,6 +44,7 @@
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
+        transition: background-color 0.3s;
     }
     nav ul li a:hover {
         background-color: #111;
@@ -55,6 +66,11 @@
         margin: 0 auto;
         padding: 20px;
         text-align: center;
+        animation: fadeIn 1.5s forwards;
+    }
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
     }
     h2 {
         margin-bottom: 10px;
@@ -67,6 +83,20 @@
         height: 150px;
         border-radius: 50%;
         margin-bottom: 20px;
+        animation: profilePicAnimation 2s ease-in-out;
+    }
+    @keyframes profilePicAnimation {
+        from {transform: scale(0);}
+        to {transform: scale(1);}
+    }
+    .image-container {
+        text-align: center;
+        margin-top: 20px;
+        animation: fadeInImage 1.5s forwards;
+    }
+    @keyframes fadeInImage {
+        from {opacity: 0;}
+        to {opacity: 1;}
     }
 </style>
 </head>
@@ -79,23 +109,9 @@
 <li><a href="index.html">Home</a></li>
 <li><a href="persoonlijke.info.html">Persoonlijke Informatie</a></li>
 <li><a href="binair.stelsel.html">Binair Stelsel</a></li>
-<li><a href="kleurmodellen">kleurmodellen</a></li>
+<li><a href="kleurmodellen.html">Kleurmodellen</a></li>
 </ul>
 </nav>
 <div class="main">
     <div class="container">
-        <h2>Persoonlijke Informatie</h2>
-        <img src="profile-picture.jpg" alt="Profielfoto" class="profile-pic">
-        <p><strong>Naam:</strong> Joek Vlastuin</p>
-        <p><strong>Leeftijd:</strong> 16 jaar</p>
-        <p><strong>Woonplaats:</strong> Veenendaal</p>
-        <p><strong>Opleiding:</strong> N&T christelijk lyceeum Veenendaal</p>
-        <p><strong>Werk:</strong> Jumbo, Ouders helpen</p>
-        <p><strong>Hobby's:</strong> Lezen, reizen, en programmeren</p>
-    </div>
-</div>
-<footer>
-<p>&copy; 2024 Mijn Website. Alle rechten voorbehouden.</p>
-</footer>
-</body>
-</html>
+        <h2>Persoon
