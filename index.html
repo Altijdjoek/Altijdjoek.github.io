@@ -9,6 +9,7 @@
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
+        background-color: #f4f4f4;
     }
     header {
         background-color: #4CAF50;
@@ -62,11 +63,20 @@
         max-width: 800px;
         margin: 0 auto;
         text-align: left;
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        border-radius: 8px;
     }
     .image-container {
         text-align: center;
         margin-top: 20px;
         animation: fadeInImage 1.5s forwards;
+    }
+    .image-container img {
+        width: 300px;
+        height: auto;
+        border-radius: 8px;
     }
     @keyframes fadeInImage {
         from {opacity: 0;}
@@ -79,12 +89,6 @@
         padding: 10px 0;
         position: relative;
         width: 100%;
-    }
-    .footer-image {
-        width: 100%;
-        height: auto;
-        margin-top: 20px;
-        animation: fadeInImage 1.5s forwards;
     }
 </style>
 </head>
@@ -105,15 +109,17 @@
         <h2>Welkom op mijn informatieve website!</h2>
         <p>Deze website biedt uitgebreide uitleg over verschillende onderwerpen, waaronder:</p>
         <ul>
-            <li><strong>Kleurmodellen:</strong> Leer over de RGB- en CMY-K-kleurmodellen en hoe ze worden gebruikt in verschillende toepassingen.</li>
-            <li><strong>Werking van computers:</strong> Ontdek hoe computers werken, van invoer en verwerking tot uitvoer en opslag.</li>
-            <li><strong>Binair stelsel:</strong> Begrijp de basis van het binaire stelsel en hoe het wordt gebruikt in de computerwereld.</li>
-            <li><strong>Persoonlijke informatie:</strong> Lees meer over mij en mijn achtergrond, inclusief mijn opleiding, werk en hobby's.</li>
+            <li><strong>Kleurmodellen:</strong> Leer over de RGB- en CMY-K-kleurmodellen en hoe ze worden gebruikt in verschillende toepassingen. Ontdek hoe deze kleurmodellen werken, hoe kleuren worden gemengd en hoe ze worden toegepast in zowel digitale als druktechnologieën.</li>
+            <li><strong>Werking van computers:</strong> Ontdek hoe computers werken, van invoer en verwerking tot uitvoer en opslag. Leer over de verschillende componenten van een computer en hoe ze samenwerken om gegevens te verwerken en taken uit te voeren.</li>
+            <li><strong>Binair stelsel:</strong> Begrijp de basis van het binaire stelsel en hoe het wordt gebruikt in de computerwereld. Het binaire stelsel vormt de basis van alle computerberekeningen en gegevensverwerking. Leer hoe binaire getallen worden gebruikt om informatie op te slaan en te verwerken.</li>
+            <li><strong>Persoonlijke informatie:</strong> Lees meer over mij en mijn achtergrond, inclusief mijn opleiding, werk en hobby's. Ontdek mijn interesses en wat mij motiveert in mijn studie en werk.</li>
         </ul>
+        <div class="image-container">
+            <img src="afbeelding2.jpg" alt="Prachtig uitzicht">
+        </div>
     </div>
 </div>
 <footer>
-    <img src="afbeelding2.jpg" alt="Prachtig uitzicht" class="footer-image">
     <p>&copy; 2024 Mijn Website. Alle rechten voorbehouden.</p>
 </footer>
 </body>
