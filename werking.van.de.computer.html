@@ -94,6 +94,35 @@
         from {opacity: 0;}
         to {opacity: 1;}
     }
+    .interactive-quiz {
+        margin-top: 20px;
+    }
+    .quiz-question {
+        margin-bottom: 10px;
+    }
+    .quiz-question input[type="radio"] {
+        margin-right: 10px;
+    }
+    .submit-btn {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .submit-btn:hover {
+        background-color: #45a049;
+    }
+    .result {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #e7f3e7;
+        border-left: 5px solid #4CAF50;
+        display: none;
+    }
     footer {
         background-color: #333;
         color: white;
@@ -103,6 +132,29 @@
         width: 100%;
     }
 </style>
+<script>
+    function checkAnswers() {
+        var correctAnswers = ["Het verwerken van gegevens", "Toetsenbord", "Harde schijf"];
+        var userAnswers = document.querySelectorAll('input[type="radio"]:checked');
+        var resultContainer = document.querySelector('.result');
+        var resultText = "";
+
+        if (userAnswers.length !== correctAnswers.length) {
+            resultText = "Beantwoord alle vragen.";
+        } else {
+            var score = 0;
+            userAnswers.forEach((answer, index) => {
+                if (answer.value === correctAnswers[index]) {
+                    score++;
+                }
+            });
+            resultText = "Je hebt " + score + " van de " + correctAnswers.length + " vragen correct beantwoord.";
+        }
+
+        resultContainer.textContent = resultText;
+        resultContainer.style.display = "block";
+    }
+</script>
 </head>
 <body>
 <header>
@@ -114,7 +166,7 @@
         <li><a href="persoonlijke.info.html">Persoonlijke Informatie</a></li>
         <li><a href="Binairstelsel.html">Binair Stelsel</a></li>
         <li><a href="kleurmodellen.html">Kleurmodellen</a></li>
-        <li><a href="werking.van.de.computer.html">werking van de computer</a></li>
+        <li><a href="werking.van.de.computer.html">Werking van de Computer</a></li>
         <li><a href="Compressietechnieken.html">Compressietechnieken</a></li>
     </ul>
 </nav>
@@ -138,6 +190,38 @@
         </div>
         <div class="image-container">
             <img src="afbeelding4.jpg" alt="Prachtig uitzicht">
+        </div>
+        <div class="section-container interactive-quiz">
+            <h2>Test je kennis</h2>
+            <div class="quiz-question">
+                <p>1. Wat is de rol van de CPU in een computer?</p>
+                <input type="radio" id="q1a1" name="q1" value="Het opslaan van gegevens">
+                <label for="q1a1">Het opslaan van gegevens</label><br>
+                <input type="radio" id="q1a2" name="q1" value="Het verwerken van gegevens">
+                <label for="q1a2">Het verwerken van gegevens</label><br>
+                <input type="radio" id="q1a3" name="q1" value="Het weergeven van uitvoer">
+                <label for="q1a3">Het weergeven van uitvoer</label>
+            </div>
+            <div class="quiz-question">
+                <p>2. Welk apparaat wordt gebruikt voor de invoer van gegevens?</p>
+                <input type="radio" id="q2a1" name="q2" value="Monitor">
+                <label for="q2a1">Monitor</label><br>
+                <input type="radio" id="q2a2" name="q2" value="Printer">
+                <label for="q2a2">Printer</label><br>
+                <input type="radio" id="q2a3" name="q2" value="Toetsenbord">
+                <label for="q2a3">Toetsenbord</label>
+            </div>
+            <div class="quiz-question">
+                <p>3. Wat is een voorbeeld van secundaire opslag?</p>
+                <input type="radio" id="q3a1" name="q3" value="RAM">
+                <label for="q3a1">RAM</label><br>
+                <input type="radio" id="q3a2" name="q3" value="Harde schijf">
+                <label for="q3a2">Harde schijf</label><br>
+                <input type="radio" id="q3a3" name="q3" value="CPU">
+                <label for="q3a3">CPU</label>
+            </div>
+            <button class="submit-btn" onclick="checkAnswers()">Indienen</button>
+            <div class="result"></div>
         </div>
     </div>
 </div>
