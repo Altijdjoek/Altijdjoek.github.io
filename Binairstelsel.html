@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Binair Stelsel</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    header {
+        background-color: #4CAF50;
+        color: white;
+        padding: 1em 0;
+        text-align: center;
+        animation: headerAnimation 2s ease-in-out;
+    }
+    @keyframes headerAnimation {
+        from {background-color: #3e8e41;}
+        to {background-color: #4CAF50;}
+    }
+    nav {
+        background-color: #333;
+        overflow: hidden;
+        animation: navAnimation 1s ease-in-out;
+    }
+    @keyframes navAnimation {
+        from {margin-left: -100px;}
+        to {margin-left: 0;}
+    }
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    nav ul li {
+        float: left;
+    }
+    nav ul li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+    nav ul li a:hover {
+        background-color: #111;
+    }
+    .main {
+        padding: 20px;
+        text-align: center;
+        animation: fadeIn 1.5s forwards;
+    }
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+    .content {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: left;
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        border-radius: 8px;
+    }
+    .section-container {
+        margin-bottom: 20px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        animation: slideIn 1s forwards;
+    }
+    @keyframes slideIn {
+        from {transform: translateY(20px); opacity: 0;}
+        to {transform: translateY(0); opacity: 1;}
+    }
+    .interactive-quiz {
+        margin-top: 20px;
+    }
+    .quiz-question {
+        margin-bottom: 10px;
+    }
+    .quiz-question input[type="radio"] {
+        margin-right: 10px;
+    }
+    .submit-btn {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .submit-btn:hover {
+        background-color: #45a049;
+    }
+    .result {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #e7f3e7;
+        border-left: 5px solid #4CAF50;
+        display: none;
+    }
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        position: relative;
+        width: 100%;
+    }
+</style>
+</head>
+<body>
+<header>
+    <h1>Binair Stelsel</h1>
+</header>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="persoonlijke.info.html">Persoonlijke Informatie</a></li>
+        <li><a href="binair.stelsel.html">Binair Stelsel</a></li>
+        <li><a href="kleurmodellen.html">Kleurmodellen</a></li>
+    </ul>
+</nav>
+<div class="main">
+    <div class="content">
+        <div class="section-container">
+            <h2>Wat is het Binair Stelsel?</h2>
+            <p>Het binaire stelsel is een talstelsel dat uitsluitend gebruikmaakt van de cijfers 0 en 1. Dit stelsel wordt veel gebruikt in de informatica en digitale elektronica omdat computers werken met twee toestanden: aan (1) en uit (0). Het binaire stelsel vormt de basis van alle computerbewerkingen en gegevensverwerking.</p>
+        </div>
+        <div class="section-container">
+            <h2>Hoe werkt het Binair Stelsel?</h2>
+            <p>In het binaire stelsel worden getallen weergegeven door een reeks bits (binaire cijfers). Elke bit vertegenwoordigt een macht van 2, waarbij de meest rechtse bit de waarde 2<sup>0</sup> heeft, de volgende bit naar links de waarde 2<sup>1</sup>, enzovoort. Bijvoorbeeld, het binaire getal 1010 komt overeen met het decimale getal 10 (1×2<sup>3</sup> + 0×2<sup>2</sup> + 1×2<sup>1</sup> + 0×2<sup>0</sup>).</p>
+        </div>
+        <div class="section-container">
+            <h2>Meer informatie</h2>
+            <p>Voor meer informatie en om je kennis over het binaire stelsel te verdiepen, bezoek <a href="https://www.binarybonanza.com" target="_blank">Binary Bonanza</a>.</p>
+        </div>
+        <div class="section-container interactive-quiz">
+            <h2>Test je kennis</h2>
+            <div class="quiz-question">
+                <p>1. Wat is het binaire equivalent van het decimale getal 5?</p>
+                <input type="radio" id="q1a1" name="q1" value="101">
+                <label for="q1a1">101</label><br>
+                <input type="radio" id="q1a2" name="q1" value="110">
+                <label for="q1a2">110</label><br>
+                <input type="radio" id="q1a3" name="q1" value="111">
+                <label for="q1a3">111</label>
+            </div>
+            <div class="quiz-question">
+                <p>2. Hoeveel verschillende waarden kan een enkele bit representeren?</p>
+                <input type="radio" id="q2a1" name="q2" value="1">
+                <label for="q2a1">1</label><br>
+                <input type="radio" id="q2a2" name="q2" value="2">
+                <label for="q2a2">2</label><br>
+                <input type="radio" id="q2a3" name="q2" value="4">
+                <label for="q2a3">4</label>
+            </div>
+            <button class="submit-btn" onclick="checkAnswers()">Indienen</button>
+            <div class="result" id="result"></div>
+        </div>
+    </div>
+</div>
+<footer>
+    <p>&copy; 2024 Binair Stelsel. Alle rechten voorbehouden.</p>
+</footer>
+<script>
+    function checkAnswers() {
+        const q1 = document.querySelector('input[name="q1"]:checked');
+        const q2 = document.querySelector('input[name="q2"]:checked');
+        const result = document.getElementById('result');
+        let score = 0;
+        
+        if (q1 && q1.value === '101') score++;
+        if (q2 && q2.value === '2') score++;
+        
+        result.innerHTML = `Je hebt ${score} van de 2 vragen correct beantwoord.`;
+        result.style.display = 'block';
+    }
+</script>
+</body>
+</html>
