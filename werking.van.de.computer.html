@@ -16,7 +16,6 @@
         color: white;
         padding: 1em 0;
         text-align: center;
-        border-top: 5px solid grey;
         animation: headerAnimation 2s ease-in-out;
     }
     @keyframes headerAnimation {
@@ -64,13 +63,17 @@
         max-width: 800px;
         margin: 0 auto;
         text-align: left;
-    }
-    .section-container {
         background-color: white;
         padding: 20px;
-        margin-bottom: 20px;
         box-shadow: 0 0 10px rgba(0,0,0,0.1);
         border-radius: 8px;
+    }
+    .section-container {
+        margin-bottom: 20px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
         animation: slideIn 1s forwards;
     }
     @keyframes slideIn {
@@ -80,11 +83,16 @@
     .image-container {
         text-align: center;
         margin-top: 20px;
+        animation: fadeInImage 1.5s forwards;
     }
     .image-container img {
-        width: 100%;
+        width: 50%;
         height: auto;
         border-radius: 8px;
+    }
+    @keyframes fadeInImage {
+        from {opacity: 0;}
+        to {opacity: 1;}
     }
     footer {
         background-color: #333;
@@ -94,50 +102,40 @@
         position: relative;
         width: 100%;
     }
-    .footer-image {
-        width: 100%;
-        height: auto;
-        margin-top: 20px;
-        animation: fadeInImage 1.5s forwards;
-    }
-    @keyframes fadeInImage {
-        from {opacity: 0;}
-        to {opacity: 1;}
-    }
 </style>
 </head>
 <body>
 <header>
-<h1>Werking van de Computer</h1>
+    <h1>Werking van de Computer</h1>
 </header>
 <nav>
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="persoonlijke.info.html">Persoonlijke Informatie</a></li>
-<li><a href="werking.van.de.computer.html">Werking van de computer</a></li>
-<li><a href="kleurmodellen.html">Kleurmodellen</a></li>
-</ul>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="persoonlijke.info.html">Persoonlijke Informatie</a></li>
+        <li><a href="binair.stelsel.html">Binair Stelsel</a></li>
+        <li><a href="kleurmodellen.html">Kleurmodellen</a></li>
+    </ul>
 </nav>
 <div class="main">
     <div class="content">
         <div class="section-container">
             <h2>Invoer</h2>
-            <p>Invoer verwijst naar alle gegevens en instructies die de computer ontvangt van invoerapparaten zoals toetsenborden, muizen, scanners, enz. Het is het eerste proces in de cyclus van computerwerking.</p>
+            <p>Invoer verwijst naar alle gegevens en instructies die de computer ontvangt van invoerapparaten zoals toetsenborden, muizen, scanners, enz. Het is het eerste proces in de cyclus van computerwerking. Invoerapparaten zetten fysieke acties of gegevens om in een formaat dat de computer kan verwerken.</p>
         </div>
         <div class="section-container">
             <h2>Verwerking</h2>
-            <p>Verwerking is het kernproces waarbij de CPU (Central Processing Unit) de ingevoerde gegevens interpreteert en berekeningen uitvoert of instructies volgt om een resultaat te genereren.</p>
+            <p>Verwerking is het kernproces waarbij de CPU (Central Processing Unit) de ingevoerde gegevens interpreteert en berekeningen uitvoert of instructies volgt om een resultaat te genereren. De CPU fungeert als het 'brein' van de computer, waarbij het gegevens verwerkt door middel van logische en rekenkundige operaties.</p>
         </div>
         <div class="section-container">
             <h2>Uitvoer</h2>
-            <p>Uitvoer is het proces waarbij de computer resultaten of gegevens levert aan uitvoerapparaten zoals monitoren, printers, luidsprekers, enz. Het is de laatste stap in de verwerking van gegevens.</p>
+            <p>Uitvoer is het proces waarbij de computer resultaten of gegevens levert aan uitvoerapparaten zoals monitoren, printers, luidsprekers, enz. Het is de laatste stap in de verwerking van gegevens. Uitvoerapparaten zetten de digitale informatie om in een voor de gebruiker begrijpelijk formaat, zoals tekst, beeld of geluid.</p>
         </div>
         <div class="section-container">
             <h2>Opslag</h2>
-            <p>Opslag verwijst naar het bewaren van gegevens en instructies op opslagmedia zoals harde schijven, SSD's, USB-sticks, en cloudopslag. Het stelt de computer in staat om gegevens voor lange termijn op te slaan en op te halen.</p>
+            <p>Opslag verwijst naar het bewaren van gegevens en instructies op opslagmedia zoals harde schijven, SSD's, USB-sticks, en cloudopslag. Het stelt de computer in staat om gegevens voor lange termijn op te slaan en op te halen. Er zijn twee hoofdtypen opslag: primaire opslag (zoals RAM) die snel toegankelijk is maar vluchtig, en secundaire opslag (zoals harde schijven) die permanent is.</p>
         </div>
         <div class="image-container">
-            <img src="afbeelding3.jpg" alt="Prachtig uitzicht" class="footer-image">
+            <img src="afbeelding4.jpg" alt="Prachtig uitzicht">
         </div>
     </div>
 </div>
