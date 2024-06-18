@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Werking van de Computer</title>
+<title>Kleurmodellen: RGB en CMY-K</title>
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -74,40 +74,88 @@
     section:nth-child(2) { animation-delay: 1s; }
     section:nth-child(3) { animation-delay: 1.5s; }
     section:nth-child(4) { animation-delay: 2s; }
+    .color-mixer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .color-mixer input {
+        margin: 5px;
+    }
+    .color-output {
+        width: 100px;
+        height: 100px;
+        border: 1px solid #000;
+        margin-top: 20px;
+    }
 </style>
 </head>
 <body>
 <header>
-    <h1>Werking van de Computer</h1>
+    <h1>Kleurmodellen: RGB en CMY-K</h1>
 </header>
 <nav>
     <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="persoonlijke.info.html">Persoonlijke Informatie</a></li>
-        <li><a href="binair.stelsel.html">Binair Stelsel</a></li>
-        <li><a href="werking.van.een.computer.html">Werking van de Computer</a></li>
+        <li><a href="#rgb">RGB</a></li>
+        <li><a href="#cmyk">CMY-K</a></li>
+        <li><a href="#pixels">Pixels</a></li>
+        <li><a href="#resolutie">Resolutie</a></li>
     </ul>
 </nav>
 <div class="main">
-    <section>
-        <h2>Invoer</h2>
-        <p>Invoer verwijst naar alle gegevens en instructies die de computer ontvangt van invoerapparaten zoals toetsenborden, muizen, scanners, enz. Het is het eerste proces in de cyclus van computerwerking.</p>
+    <section id="rgb">
+        <h2>RGB Kleurmodel</h2>
+        <p>Het RGB-kleurmodel is gebaseerd op de primaire kleuren Rood, Groen en Blauw. Door deze kleuren in verschillende intensiteiten te combineren, kunnen we een breed scala aan kleuren creëren. Dit model wordt vooral gebruikt in digitale schermen zoals monitors, televisies en camera's.</p>
+        <p>De RGB-waarden variëren van 0 tot 255. Wanneer alle drie de kleuren de maximale waarde van 255 hebben, krijg je wit licht. Wanneer alle drie de kleuren op 0 staan, krijg je zwart. De verschillende combinaties en intensiteiten van deze kleuren maken het mogelijk om miljoenen verschillende kleuren weer te geven.</p>
     </section>
-    <section>
-        <h2>Verwerking</h2>
-        <p>Verwerking is het kernproces waarbij de CPU (Central Processing Unit) de ingevoerde gegevens interpreteert en berekeningen uitvoert of instructies volgt om een resultaat te genereren.</p>
+    <section id="cmyk">
+        <h2>CMY-K Kleurmodel</h2>
+        <p>Het CMY-K-kleurmodel wordt gebruikt in kleurendruk en is gebaseerd op de kleuren Cyaan, Magenta, Geel en Zwart. Terwijl RGB een additief kleurmodel is (waarbij kleuren worden gecombineerd om licht toe te voegen), is CMY-K een subtractief kleurmodel (waarbij kleuren worden gecombineerd door licht weg te nemen).</p>
+        <p>De CMY-kleuren (Cyaan, Magenta en Geel) zijn de complementaire kleuren van de primaire RGB-kleuren. Zwart (K, voor Key) wordt toegevoegd om dieper zwart en meer schaduwen te krijgen, wat niet mogelijk is met alleen Cyaan, Magenta en Geel. Dit kleurmodel wordt veel gebruikt in de drukindustrie omdat het een breed scala aan kleuren kan produceren op papier en andere materialen.</p>
     </section>
-    <section>
-        <h2>Uitvoer</h2>
-        <p>Uitvoer is het proces waarbij de computer resultaten of gegevens levert aan uitvoerapparaten zoals monitoren, printers, luidsprekers, enz. Het is de laatste stap in de verwerking van gegevens.</p>
+    <section id="pixels">
+        <h2>Pixels</h2>
+        <p>Een pixel is de kleinste eenheid van een digitale afbeelding of een scherm. Elke pixel kan een specifieke kleur weergeven, die wordt bepaald door de combinatie van de RGB-waarden. Pixels vormen samen de beelden die we zien op schermen. Hoe meer pixels een scherm heeft, hoe scherper en gedetailleerder het beeld kan zijn.</p>
+        <p>Bijvoorbeeld, een Full HD-scherm heeft een resolutie van 1920x1080 pixels, wat betekent dat het 1920 pixels in de breedte en 1080 pixels in de hoogte heeft, voor een totaal van meer dan 2 miljoen pixels.</p>
     </section>
-    <section>
-        <h2>Opslag</h2>
-        <p>Opslag verwijst naar het bewaren van gegevens en instructies op opslagmedia zoals harde schijven, SSD's, USB-sticks, en cloudopslag. Het stelt de computer in staat om gegevens voor lange termijn op te slaan en op te halen.</p>
+    <section id="resolutie">
+        <h2>Resolutie</h2>
+        <p>Resolutie verwijst naar het aantal pixels dat een beeld bevat. Hoe hoger de resolutie, hoe meer details een beeld kan weergeven. Resolutie wordt meestal uitgedrukt in termen van breedte x hoogte, zoals 1920x1080 (Full HD) of 3840x2160 (4K).</p>
+        <p>Hogere resoluties bieden meer details en scherpere beelden, maar vereisen ook meer rekenkracht en grotere bestandsformaten. Voor afdrukken is de resolutie ook belangrijk; meestal wordt dit uitgedrukt in dots per inch (dpi), waarbij hogere dpi-waarden resulteren in scherpere afdrukken.</p>
+    </section>
+    <section class="color-mixer">
+        <h2>Kleurenmixer</h2>
+        <label for="red">Rood:</label>
+        <input type="range" id="red" name="red" min="0" max="255" value="128">
+        <label for="green">Groen:</label>
+        <input type="range" id="green" name="green" min="0" max="255" value="128">
+        <label for="blue">Blauw:</label>
+        <input type="range" id="blue" name="blue" min="0" max="255" value="128">
+        <div class="color-output" id="color-output"></div>
     </section>
 </div>
 <footer>
-    <p>&copy; 2024 Werking van de Computer. Alle rechten voorbehouden.</p>
+    <p>&copy; 2024 Kleurmodellen. Alle rechten voorbehouden.</p>
 </footer>
+<script>
+    const redInput = document.getElementById('red');
+    const greenInput = document.getElementById('green');
+    const blueInput = document.getElementById('blue');
+    const colorOutput = document.getElementById('color-output');
+
+    function updateColor() {
+        const red = redInput.value;
+        const green = greenInput.value;
+        const blue = blueInput.value;
+        colorOutput.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+    }
+
+    redInput.addEventListener('input', updateColor);
+    greenInput.addEventListener('input', updateColor);
+    blueInput.addEventListener('input', updateColor);
+
+    updateColor();
+</script>
 </body>
 </html>
