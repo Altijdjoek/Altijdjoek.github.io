@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compressietechnieken</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    header {
+        background-color: #4CAF50;
+        color: white;
+        padding: 1em 0;
+        text-align: center;
+        animation: headerAnimation 2s ease-in-out;
+    }
+    @keyframes headerAnimation {
+        from {background-color: #3e8e41;}
+        to {background-color: #4CAF50;}
+    }
+    nav {
+        background-color: #333;
+        overflow: hidden;
+        animation: navAnimation 1s ease-in-out;
+    }
+    @keyframes navAnimation {
+        from {margin-left: -100px;}
+        to {margin-left: 0;}
+    }
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    nav ul li {
+        float: left;
+    }
+    nav ul li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+    nav ul li a:hover {
+        background-color: #111;
+    }
+    .main {
+        padding: 20px;
+        text-align: center;
+        animation: fadeIn 1.5s forwards;
+    }
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+    .content {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: left;
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        border-radius: 8px;
+    }
+    .section-container {
+        margin-bottom: 20px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        animation: slideIn 1s forwards;
+    }
+    @keyframes slideIn {
+        from {transform: translateY(20px); opacity: 0;}
+        to {transform: translateY(0); opacity: 1;}
+    }
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        position: relative;
+        width: 100%;
+    }
+</style>
+</head>
+<body>
+<header>
+    <h1>Compressietechnieken</h1>
+</header>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="persoonlijke.info.html">Persoonlijke Informatie</a></li>
+        <li><a href="compressietechnieken.html">Compressietechnieken</a></li>
+        <li><a href="kleurmodellen.html">Kleurmodellen</a></li>
+    </ul>
+</nav>
+<div class="main">
+    <div class="content">
+        <div class="section-container">
+            <h2>Opslag van Beeld en Geluid</h2>
+            <p>Beeld en geluid worden digitaal opgeslagen door middel van binaire gegevens. Beelden kunnen worden opgeslagen als bitmap- of vectorafbeeldingen, terwijl geluid wordt opgeslagen door middel van sampling en sample rate.</p>
+        </div>
+        <div class="section-container">
+            <h2>Bitmap- vs. Vectorafbeeldingen</h2>
+            <p>Bitmap-afbeeldingen bestaan uit een raster van pixels, waarbij elke pixel een specifieke kleur heeft. Dit type afbeelding is ideaal voor gedetailleerde foto's maar kan onscherp worden bij vergroting. Vectorafbeeldingen daarentegen gebruiken geometrische vormen zoals lijnen en curven, waardoor ze zonder kwaliteitsverlies kunnen worden vergroot.</p>
+        </div>
+        <div class="section-container">
+            <h2>Sampling en Sample Rate</h2>
+            <p>Bij het opnemen van geluid wordt de analoge golfvorm omgezet in digitale gegevens door middel van sampling. De sample rate is het aantal metingen per seconde en wordt uitgedrukt in Hertz (Hz). Hoe hoger de sample rate, hoe nauwkeuriger de digitale representatie van het geluid.</p>
+        </div>
+        <div class="section-container">
+            <h2>Tekstcompressie</h2>
+            <p>Tekstcompressie wordt gebruikt om de opslagruimte voor tekstbestanden te verminderen. Algoritmen zoals Huffman-codering en Lempel-Ziv-Welch (LZW) coderen veelvoorkomende patronen en herhalingen in de tekst om de bestandsgrootte te verkleinen.</p>
+        </div>
+    </div>
+</div>
+<footer>
+    <p>&copy; 2024 Compressietechnieken. Alle rechten voorbehouden.</p>
+</footer>
+</body>
+</html>
