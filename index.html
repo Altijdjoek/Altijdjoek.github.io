@@ -68,17 +68,17 @@
         box-shadow: 0 0 10px rgba(0,0,0,0.1);
         border-radius: 8px;
     }
-    .image-container {
+    .video-container {
         text-align: center;
         margin-top: 20px;
-        animation: fadeInImage 1.5s forwards;
+        animation: fadeInVideo 1.5s forwards;
     }
-    .image-container img {
-        width: 300px;
+    .video-container video {
+        width: 450px; /* 1.5 times the original 300px width */
         height: auto;
         border-radius: 8px;
     }
-    @keyframes fadeInImage {
+    @keyframes fadeInVideo {
         from {opacity: 0;}
         to {opacity: 1;}
     }
@@ -116,8 +116,11 @@
             <li><strong>Binair stelsel:</strong> Begrijp de basis van het binaire stelsel en hoe het wordt gebruikt in de computerwereld. Het binaire stelsel vormt de basis van alle computerberekeningen en gegevensverwerking. Leer hoe binaire getallen worden gebruikt om informatie op te slaan en te verwerken.</li>
             <li><strong>Persoonlijke informatie:</strong> Lees meer over mij en mijn achtergrond, inclusief mijn opleiding, werk en hobby's. Ontdek mijn interesses en wat mij motiveert in mijn studie en werk.</li>
         </ul>
-        <div class="image-container">
-            <img src="afbeelding2.jpg" alt="Prachtig uitzicht">
+        <div class="video-container">
+            <video controls>
+                <source src="Video1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
     </div>
 </div>
