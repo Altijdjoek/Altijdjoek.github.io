@@ -1,101 +1,139 @@
-<!DOCTYPE html> <!-- *Geeft aan dat dit een HTML5-document is* -->
-<html lang="nl"> <!-- *Geeft aan dat de taal van het document Nederlands is* -->
+<!DOCTYPE html> 
+<!-- Geeft aan dat dit een HTML5-document is -->
+<html lang="nl"> 
+<!-- Geeft aan dat de taal van het document Nederlands is -->
 <head>
-<meta charset="UTF-8"> <!-- *Stelt de tekenset in op UTF-8, zodat alle tekens correct worden weergegeven* -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- *Maakt de pagina responsief voor verschillende schermgroottes* -->
-<title>Homepagina</title> <!-- *Titel van de webpagina die in de browserbalk wordt weergegeven* -->
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-    } <!-- *Stelt de algemene stijl van de body in, inclusief lettertype, marges, opvulling en achtergrondkleur* -->
-    header {
-        background-color: #4CAF50;
-        color: white;
-        padding: 1em 0;
-        text-align: center;
-        animation: headerAnimation 2s ease-in-out;
-    } <!-- *Stelt de stijl van de header in, inclusief achtergrondkleur, tekstkleur, opvulling, tekstuitlijning en een animatie* -->
-    @keyframes headerAnimation {
-        from {background-color: #3e8e41;}
-        to {background-color: #4CAF50;}
-    } <!-- *Definieert de animatie voor de header, waarbij de achtergrondkleur geleidelijk verandert* -->
-    nav {
-        background-color: #333;
-        overflow: hidden;
-        animation: navAnimation 1s ease-in-out;
-    } <!-- *Stelt de stijl van het navigatiegedeelte in, inclusief achtergrondkleur, overloopgedrag en een animatie* -->
-    @keyframes navAnimation {
-        from {margin-left: -100px;}
-        to {margin-left: 0;}
-    } <!-- *Definieert de animatie voor de navigatie, waarbij deze van links naar rechts in beeld schuift* -->
-    nav ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-    } <!-- *Stelt de stijl in voor de ongeordende lijst in de navigatie, verwijdert standaardlijststijlen, marges en opvulling* -->
-    nav ul li {
-        float: left;
-    } <!-- *Laat elk lijstitem in de navigatie horizontaal naast elkaar uitlijnen* -->
-    nav ul li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        transition: background-color 0.3s;
-    } <!-- *Stelt de stijl van de navigatielinks in, inclusief kleur, uitlijning, opvulling, geen onderstreping en een overgangseffect voor de achtergrondkleur* -->
-    nav ul li a:hover {
-        background-color: #111;
-    } <!-- *Verandert de achtergrondkleur van de links bij hover* -->
-    .main {
-        padding: 20px;
-        text-align: center;
-        animation: fadeIn 1.5s forwards;
-    } <!-- *Stelt de stijl van het hoofdgedeelte in, inclusief opvulling, tekstuitlijning en een fade-in animatie* -->
-    @keyframes fadeIn {
-        from {opacity: 0;}
-        to {opacity: 1;}
-    } <!-- *Definieert de fade-in animatie voor het hoofdgedeelte* -->
-    .content {
-        max-width: 800px;
-        margin: 0 auto;
-        text-align: left;
-        background-color: white;
-        padding: 20px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        border-radius: 8px;
-    } <!-- *Stelt de stijl van de content in, inclusief maximale breedte, centrering, tekstuitlijning, achtergrondkleur, opvulling, schaduw en afgeronde hoeken* -->
-    .video-container {
-        text-align: center;
-        margin-top: 20px;
-        animation: fadeInVideo 1.5s forwards;
-    } <!-- *Stelt de stijl van de video-container in, inclusief tekstuitlijning, marge boven en een fade-in animatie* -->
-    .video-container video {
-        width: 450px; /* 1.5 times the original 300px width */
-        height: auto;
-        border-radius: 8px;
-    } <!-- *Stelt de stijl van de video in, inclusief breedte, automatische hoogte en afgeronde hoeken* -->
-    @keyframes fadeInVideo {
-        from {opacity: 0;}
-        to {opacity: 1;}
-    } <!-- *Definieert de fade-in animatie voor de video-container* -->
-    footer {
-        background-color: #333;
-        color: white;
-        text-align: center;
-        padding: 10px 0;
-        position: relative;
-        width: 100%;
-    } <!-- *Stelt de stijl van de voettekst in, inclusief achtergrondkleur, tekstkleur, tekstuitlijning, opvulling en breedte* -->
-</style>
+    <meta charset="UTF-8"> 
+    <!-- Stelt de tekenset in op UTF-8, zodat alle tekens correct worden weergegeven -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- Maakt de pagina responsief voor verschillende schermgroottes -->
+    <title>Homepagina</title> 
+    <!-- Titel van de webpagina die in de browserbalk wordt weergegeven -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        } 
+        /* Stelt de algemene stijl van de body in, inclusief lettertype, marges, opvulling en achtergrondkleur */
+        
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+            animation: headerAnimation 2s ease-in-out;
+        } 
+        /* Stelt de stijl van de header in, inclusief achtergrondkleur, tekstkleur, opvulling, tekstuitlijning en een animatie */
+        
+        @keyframes headerAnimation {
+            from {background-color: #3e8e41;}
+            to {background-color: #4CAF50;}
+        } 
+        /* Definieert de animatie voor de header, waarbij de achtergrondkleur geleidelijk verandert */
+        
+        nav {
+            background-color: #333;
+            overflow: hidden;
+            animation: navAnimation 1s ease-in-out;
+        } 
+        /* Stelt de stijl van het navigatiegedeelte in, inclusief achtergrondkleur, overloopgedrag en een animatie */
+        
+        @keyframes navAnimation {
+            from {margin-left: -100px;}
+            to {margin-left: 0;}
+        } 
+        /* Definieert de animatie voor de navigatie, waarbij deze van links naar rechts in beeld schuift */
+        
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        } 
+        /* Stelt de stijl in voor de ongeordende lijst in de navigatie, verwijdert standaardlijststijlen, marges en opvulling */
+        
+        nav ul li {
+            float: left;
+        } 
+        /* Laat elk lijstitem in de navigatie horizontaal naast elkaar uitlijnen */
+        
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        } 
+        /* Stelt de stijl van de navigatielinks in, inclusief kleur, uitlijning, opvulling, geen onderstreping en een overgangseffect voor de achtergrondkleur */
+        
+        nav ul li a:hover {
+            background-color: #111;
+        } 
+        /* Verandert de achtergrondkleur van de links bij hover */
+        
+        .main {
+            padding: 20px;
+            text-align: center;
+            animation: fadeIn 1.5s forwards;
+        } 
+        /* Stelt de stijl van het hoofdgedeelte in, inclusief opvulling, tekstuitlijning en een fade-in animatie */
+        
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        } 
+        /* Definieert de fade-in animatie voor het hoofdgedeelte */
+        
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        } 
+        /* Stelt de stijl van de content in, inclusief maximale breedte, centrering, tekstuitlijning, achtergrondkleur, opvulling, schaduw en afgeronde hoeken */
+        
+        .video-container {
+            text-align: center;
+            margin-top: 20px;
+            animation: fadeInVideo 1.5s forwards;
+        } 
+        /* Stelt de stijl van de video-container in, inclusief tekstuitlijning, marge boven en een fade-in animatie */
+        
+        .video-container video {
+            width: 450px; /* 1.5 times the original 300px width */
+            height: auto;
+            border-radius: 8px;
+        } 
+        /* Stelt de stijl van de video in, inclusief breedte, automatische hoogte en afgeronde hoeken */
+        
+        @keyframes fadeInVideo {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        } 
+        /* Definieert de fade-in animatie voor de video-container */
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            width: 100%;
+        } 
+        /* Stelt de stijl van de voettekst in, inclusief achtergrondkleur, tekstkleur, tekstuitlijning, opvulling en breedte */
+    </style>
 </head>
 <body>
 <header>
     <h1>Welkom op mijn Website</h1>
-</header> <!-- *Header van de pagina met een titel* -->
+</header> 
+<!-- Header van de pagina met een titel -->
+
 <nav>
     <ul>
         <li><a href="index.html">Home</a></li>
@@ -105,7 +143,9 @@
         <li><a href="werking.van.de.computer.html">Werking van de computer</a></li>
         <li><a href="Compressietechnieken.html">Compressietechnieken</a></li>
     </ul>
-</nav> <!-- *Navigatiemenu met links naar verschillende pagina's* -->
+</nav> 
+<!-- Navigatiemenu met links naar verschillende pagina's -->
+
 <div class="main">
     <div class="content">
         <h2>Welkom op mijn informatieve website!</h2>
@@ -115,18 +155,25 @@
             <li><strong>Werking van computers:</strong> Ontdek hoe computers werken, van invoer en verwerking tot uitvoer en opslag. Leer over de verschillende componenten van een computer en hoe ze samenwerken om gegevens te verwerken en taken uit te voeren.</li>
             <li><strong>Binair stelsel:</strong> Begrijp de basis van het binaire stelsel en hoe het wordt gebruikt in de computerwereld. Het binaire stelsel vormt de basis van alle computerberekeningen en gegevensverwerking. Leer hoe binaire getallen worden gebruikt om informatie op te slaan en te verwerken.</li>
             <li><strong>Persoonlijke informatie:</strong> Lees meer over mij en mijn achtergrond, inclusief mijn opleiding, werk en hobby's. Ontdek mijn interesses en wat mij motiveert in mijn studie en werk.</li>
-        </ul> <!-- *Lijst met verschillende onderwerpen die op de website worden behandeld* -->
+        </ul> 
+        <!-- Lijst met verschillende onderwerpen die op de website worden behandeld -->
+
         <div class="video-container">
             <video controls>
                 <source src="Video1.mp4" type="video/mp4">
                 <source src="Video1.webm" type="video/webm">
                 Your browser does not support the video tag.
             </video>
-        </div> <!-- *Container voor een video met een video-element met verschillende bronnen* -->
-    </div> <!-- *Hoofdinhoud van de pagina* -->
+        </div> 
+        <!-- Container voor een video met een video-element met verschillende bronnen -->
+    </div> 
+    <!-- Hoofdinhoud van de pagina -->
 </div>
+
 <footer>
     <p>&copy; 2024 Mijn Website. Alle rechten voorbehouden.</p>
-</footer> <!-- *Voettekst van de pagina* -->
+</footer> 
+<!-- Voettekst van de pagina -->
+
 </body>
 </html>
