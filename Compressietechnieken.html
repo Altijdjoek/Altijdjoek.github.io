@@ -1,44 +1,44 @@
-<!DOCTYPE html> <!-- *Geeft aan dat dit een HTML5-document is* -->
-<html lang="nl"> <!-- *Geeft aan dat de taal van het document Nederlands is* -->
+<!DOCTYPE html> <!-- Geeft aan dat dit een HTML5-document is -->
+<html lang="nl"> <!-- Geeft aan dat de taal van het document Nederlands is -->
 <head>
-<meta charset="UTF-8"> <!-- *Stelt de tekenset in op UTF-8, zodat alle tekens correct worden weergegeven* -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- *Maakt de pagina responsief voor verschillende schermgroottes* -->
-<title>Compressietechnieken</title> <!-- *Titel van de webpagina die in de browserbalk wordt weergegeven* -->
+<meta charset="UTF-8"> <!-- Stelt de tekenset in op UTF-8, zodat alle tekens correct worden weergegeven -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Maakt de pagina responsief voor verschillende schermgroottes -->
+<title>Compressietechnieken</title> <!-- Titel van de webpagina die in de browserbalk wordt weergegeven -->
 <style>
     body {
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
         background-color: #f4f4f4;
-    } <!-- *Stelt de algemene stijl van de body in, inclusief lettertype, marges, opvulling en achtergrondkleur* -->
+    } /* Stelt de algemene stijl van de body in, inclusief lettertype, marges, opvulling en achtergrondkleur */
     header {
         background-color: #4CAF50;
         color: white;
         padding: 1em 0;
         text-align: center;
         animation: headerAnimation 2s ease-in-out;
-    } <!-- *Stelt de stijl van de header in, inclusief achtergrondkleur, tekstkleur, opvulling, tekstuitlijning en een animatie* -->
+    } /* Stelt de stijl van de header in, inclusief achtergrondkleur, tekstkleur, opvulling, tekstuitlijning en een animatie */
     @keyframes headerAnimation {
         from {background-color: #3e8e41;}
         to {background-color: #4CAF50;}
-    } <!-- *Definieert de animatie voor de header, waarbij de achtergrondkleur geleidelijk verandert* -->
+    } /* Definieert de animatie voor de header, waarbij de achtergrondkleur geleidelijk verandert */
     nav {
         background-color: #333;
         overflow: hidden;
         animation: navAnimation 1s ease-in-out;
-    } <!-- *Stelt de stijl van het navigatiegedeelte in, inclusief achtergrondkleur, overloopgedrag en een animatie* -->
+    } /* Stelt de stijl van het navigatiegedeelte in, inclusief achtergrondkleur, overloopgedrag en een animatie */
     @keyframes navAnimation {
         from {margin-left: -100px;}
         to {margin-left: 0;}
-    } <!-- *Definieert de animatie voor de navigatie, waarbij deze van links naar rechts in beeld schuift* -->
+    } /* Definieert de animatie voor de navigatie, waarbij deze van links naar rechts in beeld schuift */
     nav ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
-    } <!-- *Stelt de stijl in voor de ongeordende lijst in de navigatie, verwijdert standaardlijststijlen, marges en opvulling* -->
+    } /* Stelt de stijl in voor de ongeordende lijst in de navigatie, verwijdert standaardlijststijlen, marges en opvulling */
     nav ul li {
         float: left;
-    } <!-- *Laat elk lijstitem in de navigatie horizontaal naast elkaar uitlijnen* -->
+    } /* Laat elk lijstitem in de navigatie horizontaal naast elkaar uitlijnen */
     nav ul li a {
         display: block;
         color: white;
@@ -46,19 +46,19 @@
         padding: 14px 16px;
         text-decoration: none;
         transition: background-color 0.3s;
-    } <!-- *Stelt de stijl van de navigatielinks in, inclusief kleur, uitlijning, opvulling, geen onderstreping en een overgangseffect voor de achtergrondkleur* -->
+    } /* Stelt de stijl van de navigatielinks in, inclusief kleur, uitlijning, opvulling, geen onderstreping en een overgangseffect voor de achtergrondkleur */
     nav ul li a:hover {
         background-color: #111;
-    } <!-- *Verandert de achtergrondkleur van de links bij hover* -->
+    } /* Verandert de achtergrondkleur van de links bij hover */
     .main {
         padding: 20px;
         text-align: center;
         animation: fadeIn 1.5s forwards;
-    } <!-- *Stelt de stijl van het hoofdgedeelte in, inclusief opvulling, tekstuitlijning en een fade-in animatie* -->
+    } /* Stelt de stijl van het hoofdgedeelte in, inclusief opvulling, tekstuitlijning en een fade-in animatie */
     @keyframes fadeIn {
         from {opacity: 0;}
         to {opacity: 1;}
-    } <!-- *Definieert de fade-in animatie voor het hoofdgedeelte* -->
+    } /* Definieert de fade-in animatie voor het hoofdgedeelte */
     .content {
         max-width: 800px;
         margin: 0 auto;
@@ -67,7 +67,7 @@
         padding: 20px;
         box-shadow: 0 0 10px rgba(0,0,0,0.1);
         border-radius: 8px;
-    } <!-- *Stelt de stijl van de content in, inclusief maximale breedte, centrering, tekstuitlijning, achtergrondkleur, opvulling, schaduw en afgeronde hoeken* -->
+    } /* Stelt de stijl van de content in, inclusief maximale breedte, centrering, tekstuitlijning, achtergrondkleur, opvulling, schaduw en afgeronde hoeken */
     .section-container {
         margin-bottom: 20px;
         padding: 20px;
@@ -75,20 +75,20 @@
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0,0,0,0.1);
         animation: slideIn 1s forwards;
-    } <!-- *Stelt de stijl van de sectiecontainer in, inclusief marges, opvulling, achtergrondkleur, afgeronde hoeken, schaduw en een slide-in animatie* -->
+    } /* Stelt de stijl van de sectiecontainer in, inclusief marges, opvulling, achtergrondkleur, afgeronde hoeken, schaduw en een slide-in animatie */
     @keyframes slideIn {
         from {transform: translateY(20px); opacity: 0;}
         to {transform: translateY(0); opacity: 1;}
-    } <!-- *Definieert de slide-in animatie voor de sectiecontainer* -->
+    } /* Definieert de slide-in animatie voor de sectiecontainer */
     .interactive-quiz {
         margin-top: 20px;
-    } <!-- *Stelt de marge boven de interactieve quiz in* -->
+    } /* Stelt de marge boven de interactieve quiz in */
     .quiz-question {
         margin-bottom: 10px;
-    } <!-- *Stelt de marge onder de quizvragen in* -->
+    } /* Stelt de marge onder de quizvragen in */
     .quiz-question input[type="radio"] {
         margin-right: 10px;
-    } <!-- *Stelt de marge rechts van de radio-knoppen in* -->
+    } /* Stelt de marge rechts van de radio-knoppen in */
     .submit-btn {
         margin-top: 10px;
         padding: 10px 20px;
@@ -98,17 +98,17 @@
         border-radius: 4px;
         cursor: pointer;
         transition: background-color 0.3s;
-    } <!-- *Stelt de stijl van de verzendknop in, inclusief marges, opvulling, achtergrondkleur, tekstkleur, geen rand, afgeronde hoeken, cursor en een overgangseffect voor de achtergrondkleur* -->
+    } /* Stelt de stijl van de verzendknop in, inclusief marges, opvulling, achtergrondkleur, tekstkleur, geen rand, afgeronde hoeken, cursor en een overgangseffect voor de achtergrondkleur */
     .submit-btn:hover {
         background-color: #45a049;
-    } <!-- *Verandert de achtergrondkleur van de verzendknop bij hover* -->
+    } /* Verandert de achtergrondkleur van de verzendknop bij hover */
     .result {
         margin-top: 20px;
         padding: 10px;
         background-color: #e7f3e7;
         border-left: 5px solid #4CAF50;
         display: none;
-    } <!-- *Stelt de stijl van het resultaatgedeelte in, inclusief marges, opvulling, achtergrondkleur, linkerrand en standaard verbergen* -->
+    } /* Stelt de stijl van het resultaatgedeelte in, inclusief marges, opvulling, achtergrondkleur, linkerrand en standaard verbergen */
     footer {
         background-color: #333;
         color: white;
@@ -116,13 +116,13 @@
         padding: 10px 0;
         position: relative;
         width: 100%;
-    } <!-- *Stelt de stijl van de voettekst in, inclusief achtergrondkleur, tekstkleur, tekstuitlijning, opvulling en breedte* -->
+    } /* Stelt de stijl van de voettekst in, inclusief achtergrondkleur, tekstkleur, tekstuitlijning, opvulling en breedte */
 </style>
 </head>
 <body>
 <header>
     <h1>Compressietechnieken</h1>
-</header> <!-- *Header van de pagina met een titel* -->
+</header> <!-- Header van de pagina met een titel -->
 <nav>
     <ul>
         <li><a href="index.html">Home</a></li>
@@ -132,25 +132,25 @@
         <li><a href="werking.van.de.computer.html">Werking van de computer</a></li>
         <li><a href="Compressietechnieken.html">Compressietechnieken</a></li>
     </ul>
-</nav> <!-- *Navigatiemenu met links naar verschillende pagina's* -->
+</nav> <!-- Navigatiemenu met links naar verschillende pagina's -->
 <div class="main">
     <div class="content">
         <div class="section-container">
             <h2>Opslag van Beeld en Geluid</h2>
             <p>Beeld en geluid worden digitaal opgeslagen door middel van binaire gegevens. Beelden kunnen worden opgeslagen als bitmap- of vectorafbeeldingen, terwijl geluid wordt opgeslagen door middel van sampling en sample rate.</p>
-        </div> <!-- *Sectie over de opslag van beeld en geluid, met uitleg over bitmap- en vectorafbeeldingen en geluidsopslag* -->
+        </div> <!-- Sectie over de opslag van beeld en geluid, met uitleg over bitmap- en vectorafbeeldingen en geluidsopslag -->
         <div class="section-container">
             <h2>Bitmap- vs. Vectorafbeeldingen</h2>
             <p>Bitmap-afbeeldingen bestaan uit een raster van pixels, waarbij elke pixel een specifieke kleur heeft. Dit type afbeelding is ideaal voor gedetailleerde foto's maar kan onscherp worden bij vergroting. Vectorafbeeldingen daarentegen gebruiken geometrische vormen zoals lijnen en curven, waardoor ze zonder kwaliteitsverlies kunnen worden vergroot.</p>
-        </div> <!-- *Sectie over het verschil tussen bitmap- en vectorafbeeldingen* -->
+        </div> <!-- Sectie over het verschil tussen bitmap- en vectorafbeeldingen -->
         <div class="section-container">
             <h2>Sampling en Sample Rate</h2>
             <p>Bij het opnemen van geluid wordt de analoge golfvorm omgezet in digitale gegevens door middel van sampling. De sample rate is het aantal metingen per seconde en wordt uitgedrukt in Hertz (Hz). Hoe hoger de sample rate, hoe nauwkeuriger de digitale representatie van het geluid.</p>
-        </div> <!-- *Sectie over sampling en sample rate in geluidsopname* -->
+        </div> <!-- Sectie over sampling en sample rate in geluidsopname -->
         <div class="section-container">
             <h2>Tekstcompressie</h2>
             <p>Tekstcompressie wordt gebruikt om de opslagruimte voor tekstbestanden te verminderen. Algoritmen zoals Huffman-codering en Lempel-Ziv-Welch (LZW) coderen veelvoorkomende patronen en herhalingen in de tekst om de bestandsgrootte te verkleinen.</p>
-        </div> <!-- *Sectie over tekstcompressie en gebruikte algoritmen* -->
+        </div> <!-- Sectie over tekstcompressie en gebruikte algoritmen -->
         <div class="section-container interactive-quiz">
             <h2>Test je kennis</h2>
             <div class="quiz-question">
@@ -161,7 +161,7 @@
                 <label for="q1a2">Bitmap-afbeeldingen bestaan uit pixels</label><br>
                 <input type="radio" id="q1a3" name="q1" value="Vectorafbeeldingen kunnen niet worden vergroot">
                 <label for="q1a3">Vectorafbeeldingen kunnen niet worden vergroot</label>
-            </div> <!-- *Quizvraag over het verschil tussen bitmap- en vectorafbeeldingen* -->
+            </div> <!-- Quizvraag over het verschil tussen bitmap- en vectorafbeeldingen -->
             <div class="quiz-question">
                 <p>2. Wat betekent 'sample rate' in de context van geluidsopname?</p>
                 <input type="radio" id="q2a1" name="q2" value="Het aantal bits per seconde">
@@ -170,7 +170,7 @@
                 <label for="q2a2">Het aantal metingen per seconde</label><br>
                 <input type="radio" id="q2a3" name="q2" value="De lengte van het geluidsfragment">
                 <label for="q2a3">De lengte van het geluidsfragment</label>
-            </div> <!-- *Quizvraag over de betekenis van sample rate bij geluidsopname* -->
+            </div> <!-- Quizvraag over de betekenis van sample rate bij geluidsopname -->
             <div class="quiz-question">
                 <p>3. Welke van de volgende algoritmen wordt gebruikt voor tekstcompressie?</p>
                 <input type="radio" id="q3a1" name="q3" value="Huffman-codering">
@@ -179,15 +179,15 @@
                 <label for="q3a2">Dijkstra's algoritme</label><br>
                 <input type="radio" id="q3a3" name="q3" value="Euclidische algoritme">
                 <label for="q3a3">Euclidische algoritme</label>
-            </div> <!-- *Quizvraag over algoritmen die worden gebruikt voor tekstcompressie* -->
-            <button class="submit-btn" onclick="checkAnswers()">Indienen</button> <!-- *Knop om de quiz in te dienen* -->
-            <div class="result" id="result"></div> <!-- *Gedeelte om de quizresultaten weer te geven* -->
-        </div> <!-- *Sectie met interactieve quiz* -->
-    </div> <!-- *Hoofdinhoud van de pagina* -->
+            </div> <!-- Quizvraag over algoritmen die worden gebruikt voor tekstcompressie -->
+            <button class="submit-btn" onclick="checkAnswers()">Indienen</button> <!-- Knop om de quiz in te dienen -->
+            <div class="result" id="result"></div> <!-- Gedeelte om de quizresultaten weer te geven -->
+        </div> <!-- Sectie met interactieve quiz -->
+    </div> <!-- Hoofdinhoud van de pagina -->
 </div>
 <footer>
     <p>&copy; 2024 Compressietechnieken. Alle rechten voorbehouden.</p>
-</footer> <!-- *Voettekst van de pagina* -->
+</footer> <!-- Voettekst van de pagina -->
 <script>
     function checkAnswers() {
         const q1 = document.querySelector('input[name="q1"]:checked');
@@ -203,6 +203,6 @@
         result.innerHTML = `Je hebt ${score} van de 3 vragen correct beantwoord.`;
         result.style.display = 'block';
     }
-</script> <!-- *Script om de antwoorden van de quiz te controleren en de score weer te geven* -->
+</script> <!-- Script om de antwoorden van de quiz te controleren en de score weer te geven -->
 </body>
 </html>
