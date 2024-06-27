@@ -1,43 +1,43 @@
-<!DOCTYPE html>
-<html lang="nl">
+<!DOCTYPE html> <!-- Geeft aan dat dit een HTML5-document is -->
+<html lang="nl"> <!-- Geeft aan dat de taal van het document Nederlands is -->
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Persoonlijke Informatie</title>
+<meta charset="UTF-8"> <!-- Stelt de tekenset in op UTF-8, zodat alle tekens correct worden weergegeven -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Maakt de pagina responsief voor verschillende schermgroottes -->
+<title>Persoonlijke Informatie</title> <!-- Titel van de webpagina die in de browserbalk wordt weergegeven -->
 <style>
     body {
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-    }
+    } /* Stelt de algemene stijl van de body in, inclusief lettertype, marges en opvulling */
     header {
         background-color: #4CAF50;
         color: white;
         padding: 1em 0;
         text-align: center;
         animation: headerAnimation 2s ease-in-out;
-    }
+    } /* Stelt de stijl van de header in, inclusief achtergrondkleur, tekstkleur, opvulling, tekstuitlijning en een animatie */
     @keyframes headerAnimation {
         from {background-color: #3e8e41;}
         to {background-color: #4CAF50;}
-    }
+    } /* Definieert de animatie voor de header, waarbij de achtergrondkleur geleidelijk verandert */
     nav {
         background-color: #333;
-    }
+    } /* Stelt de stijl van het navigatiegedeelte in, inclusief achtergrondkleur */
     nav ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
         overflow: hidden;
         animation: navAnimation 1s ease-in-out;
-    }
+    } /* Stelt de stijl in voor de ongeordende lijst in de navigatie, verwijdert standaardlijststijlen, marges en opvulling, en voegt een animatie toe */
     @keyframes navAnimation {
         from {margin-left: -100px;}
         to {margin-left: 0;}
-    }
+    } /* Definieert de animatie voor de navigatie, waarbij deze van links naar rechts in beeld schuift */
     nav ul li {
         float: left;
-    }
+    } /* Laat elk lijstitem in de navigatie horizontaal naast elkaar uitlijnen */
     nav ul li a {
         display: block;
         color: white;
@@ -45,13 +45,13 @@
         padding: 14px 16px;
         text-decoration: none;
         transition: background-color 0.3s;
-    }
+    } /* Stelt de stijl van de navigatielinks in, inclusief kleur, uitlijning, opvulling, geen onderstreping en een overgangseffect voor de achtergrondkleur */
     nav ul li a:hover {
         background-color: #111;
-    }
+    } /* Verandert de achtergrondkleur van de links bij hover */
     .main {
         padding: 20px;
-    }
+    } /* Stelt de opvulling van het hoofdgedeelte in */
     footer {
         background-color: #333;
         color: white;
@@ -60,60 +60,60 @@
         position: fixed;
         bottom: 0;
         width: 100%;
-    }
+    } /* Stelt de stijl van de voettekst in, inclusief achtergrondkleur, tekstkleur, tekstuitlijning, opvulling, positionering en breedte */
     .container {
         max-width: 600px;
         margin: 0 auto;
         padding: 20px;
         text-align: center;
         animation: fadeIn 1.5s forwards;
-    }
+    } /* Stelt de stijl van de container in, inclusief maximale breedte, automatische marges, opvulling, centrering van tekst en een fade-in animatie */
     @keyframes fadeIn {
         from {opacity: 0;}
         to {opacity: 1;}
-    }
+    } /* Definieert de fade-in animatie voor de container */
     h2 {
         margin-bottom: 10px;
-    }
+    } /* Stelt de marge onder de h2-koptekst in */
     p {
         text-align: left;
-    }
+    } /* Stelt de tekstuitlijning van paragrafen in op links */
     .profile-pic {
         width: 150px;
         height: 150px;
         border-radius: 50%;
         margin-bottom: 20px;
         animation: profilePicAnimation 2s ease-in-out;
-    }
+    } /* Stelt de stijl van de profielfoto in, inclusief afmetingen, afgeronde hoeken, marge onderaan en een animatie */
     @keyframes profilePicAnimation {
         from {transform: scale(0);}
         to {transform: scale(1);}
-    }
+    } /* Definieert de animatie voor de profielfoto, waarbij deze in grootte toeneemt */
     .image-container {
         text-align: center;
         margin-top: 20px;
         animation: fadeInImage 1.5s forwards;
-    }
+    } /* Stelt de stijl van de afbeeldingscontainer in, inclusief centrering van tekst, marge bovenaan en een fade-in animatie */
     @keyframes fadeInImage {
         from {opacity: 0;}
         to {opacity: 1;}
-    }
+    } /* Definieert de fade-in animatie voor de afbeeldingscontainer */
 </style>
 </head>
 <body>
 <header>
 <h1>Welkom op mijn Website</h1>
-</header>
+</header> <!-- Header van de pagina met een titel -->
 <nav>
 <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="persoonlijke.info.html">Persoonlijke Informatie</a></li>
         <li><a href="Binairstelsel.html">Binair Stelsel</a></li>
         <li><a href="kleurmodellen.html">Kleurmodellen</a></li>
-        <li><a href="werking.van.de.computer.html">werking van de computer</a></li>
+        <li><a href="werking.van.de.computer.html">Werking van de computer</a></li>
         <li><a href="Compressietechnieken.html">Compressietechnieken</a></li>
 </ul>
-</nav>
+</nav> <!-- Navigatiemenu met links naar verschillende pagina's -->
 <div class="main">
     <div class="container">
         <h2>Persoonlijke Informatie</h2>
@@ -125,9 +125,9 @@
         <p><strong>Werk:</strong> Jumbo, Ouders helpen</p>
         <p><strong>Hobby's:</strong> Lezen, reizen, en programmeren</p>
     </div>
-</div>
+</div> <!-- Hoofdgedeelte met persoonlijke informatie in een container -->
 <footer>
 <p>&copy; 2024 Mijn Website. Alle rechten voorbehouden.</p>
-</footer>
+</footer> <!-- Voettekst van de pagina -->
 </body>
 </html>
