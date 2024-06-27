@@ -1,15 +1,15 @@
-<!DOCTYPE html>
-<html lang="nl">
+<!DOCTYPE html> <!-- Geeft aan dat dit een HTML5-document is -->
+<html lang="nl"> <!-- Geeft aan dat de taal van het document Nederlands is -->
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kleurmodellen: RGB en CMY-K</title>
+<meta charset="UTF-8"> <!-- Stelt de tekenset in op UTF-8, zodat alle tekens correct worden weergegeven -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Maakt de pagina responsief voor verschillende schermgroottes -->
+<title>Kleurmodellen: RGB en CMY-K</title> <!-- Titel van de webpagina die in de browserbalk wordt weergegeven -->
 <style>
     body {
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-    }
+    } /* Stelt de algemene stijl van de body in, inclusief lettertype, marges en opvulling */
     header {
         background-color: #4CAF50;
         color: white;
@@ -17,28 +17,28 @@
         text-align: center;
         border-top: 5px solid grey;
         animation: headerAnimation 2s ease-in-out;
-    }
+    } /* Stelt de stijl van de header in, inclusief achtergrondkleur, tekstkleur, opvulling, tekstuitlijning, bovenste rand en een animatie */
     @keyframes headerAnimation {
         from {background-color: #3e8e41;}
         to {background-color: #4CAF50;}
-    }
+    } /* Definieert de animatie voor de header, waarbij de achtergrondkleur geleidelijk verandert */
     nav {
         background-color: #333;
         overflow: hidden;
-    }
+    } /* Stelt de stijl van het navigatiegedeelte in, inclusief achtergrondkleur en overloopgedrag */
     nav ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
         animation: navAnimation 1s ease-in-out;
-    }
+    } /* Stelt de stijl in voor de ongeordende lijst in de navigatie, verwijdert standaardlijststijlen, marges en opvulling, en voegt een animatie toe */
     @keyframes navAnimation {
         from {margin-left: -100px;}
         to {margin-left: 0;}
-    }
+    } /* Definieert de animatie voor de navigatie, waarbij deze van links naar rechts in beeld schuift */
     nav ul li {
         float: left;
-    }
+    } /* Laat elk lijstitem in de navigatie horizontaal naast elkaar uitlijnen */
     nav ul li a {
         display: block;
         color: white;
@@ -46,13 +46,13 @@
         padding: 14px 16px;
         text-decoration: none;
         transition: background-color 0.3s;
-    }
+    } /* Stelt de stijl van de navigatielinks in, inclusief kleur, uitlijning, opvulling, geen onderstreping en een overgangseffect voor de achtergrondkleur */
     nav ul li a:hover {
         background-color: #111;
-    }
+    } /* Verandert de achtergrondkleur van de links bij hover */
     .main {
         padding: 20px;
-    }
+    } /* Stelt de opvulling van het hoofdgedeelte in */
     footer {
         background-color: #333;
         color: white;
@@ -61,71 +61,72 @@
         position: fixed;
         bottom: 0;
         width: 100%;
-    }
+    } /* Stelt de stijl van de voettekst in, inclusief achtergrondkleur, tekstkleur, tekstuitlijning, opvulling, positionering en breedte */
     section {
         margin-bottom: 20px;
         opacity: 0;
         animation: fadeIn 1s forwards;
-    }
+    } /* Stelt de stijl van de secties in, inclusief marges, beginnende ondoorzichtigheid en een fade-in animatie */
     @keyframes fadeIn {
         to {opacity: 1;}
-    }
+    } /* Definieert de fade-in animatie voor de secties */
     section:nth-child(1) { animation-delay: 0.5s; }
     section:nth-child(2) { animation-delay: 1s; }
     section:nth-child(3) { animation-delay: 1.5s; }
     section:nth-child(4) { animation-delay: 2s; }
+    /* Stelt de vertragingen in voor de fade-in animaties van de verschillende secties */
     .color-mixer {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-top: 20px;
-    }
+    } /* Stelt de stijl van de kleurmixer in, inclusief flexibele layout, verticale richting, centrering en marge bovenaan */
     .color-mixer input {
         margin: 5px;
-    }
+    } /* Stelt de marges in voor de invoerelementen van de kleurmixer */
     .color-output {
         width: 100px;
         height: 100px;
         border: 1px solid #000;
         margin-top: 20px;
-    }
+    } /* Stelt de stijl van de kleurweergave in, inclusief afmetingen, rand en marge bovenaan */
 </style>
 </head>
 <body>
 <header>
     <h1>Kleurmodellen: RGB en CMY-K</h1>
-</header>
+</header> <!-- Header van de pagina met een titel -->
 <nav>
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="persoonlijke.info.html">Persoonlijke Informatie</a></li>
         <li><a href="Binairstelsel.html">Binair Stelsel</a></li>
         <li><a href="kleurmodellen.html">Kleurmodellen</a></li>
-        <li><a href="werking.van.de.computer.html">werking van de computer</a></li>
+        <li><a href="werking.van.de.computer.html">Werking van de computer</a></li>
         <li><a href="Compressietechnieken.html">Compressietechnieken</a></li>
     </ul>
-</nav>
+</nav> <!-- Navigatiemenu met links naar verschillende pagina's -->
 <div class="main">
     <section id="rgb">
         <h2>RGB Kleurmodel</h2>
         <p>Het RGB-kleurmodel is gebaseerd op de primaire kleuren Rood, Groen en Blauw. Door deze kleuren in verschillende intensiteiten te combineren, kunnen we een breed scala aan kleuren creëren. Dit model wordt vooral gebruikt in digitale schermen zoals monitors, televisies en camera's.</p>
         <p>De RGB-waarden variëren van 0 tot 255. Wanneer alle drie de kleuren de maximale waarde van 255 hebben, krijg je wit licht. Wanneer alle drie de kleuren op 0 staan, krijg je zwart. De verschillende combinaties en intensiteiten van deze kleuren maken het mogelijk om miljoenen verschillende kleuren weer te geven.</p>
-    </section>
+    </section> <!-- Sectie met uitleg over het RGB-kleurmodel -->
     <section id="cmyk">
         <h2>CMY-K Kleurmodel</h2>
         <p>Het CMY-K-kleurmodel wordt gebruikt in kleurendruk en is gebaseerd op de kleuren Cyaan, Magenta, Geel en Zwart. Terwijl RGB een additief kleurmodel is (waarbij kleuren worden gecombineerd om licht toe te voegen), is CMY-K een subtractief kleurmodel (waarbij kleuren worden gecombineerd door licht weg te nemen).</p>
         <p>De CMY-kleuren (Cyaan, Magenta en Geel) zijn de complementaire kleuren van de primaire RGB-kleuren. Zwart (K, voor Key) wordt toegevoegd om dieper zwart en meer schaduwen te krijgen, wat niet mogelijk is met alleen Cyaan, Magenta en Geel. Dit kleurmodel wordt veel gebruikt in de drukindustrie omdat het een breed scala aan kleuren kan produceren op papier en andere materialen.</p>
-    </section>
+    </section> <!-- Sectie met uitleg over het CMY-K-kleurmodel -->
     <section id="pixels">
         <h2>Pixels</h2>
         <p>Een pixel is de kleinste eenheid van een digitale afbeelding of een scherm. Elke pixel kan een specifieke kleur weergeven, die wordt bepaald door de combinatie van de RGB-waarden. Pixels vormen samen de beelden die we zien op schermen. Hoe meer pixels een scherm heeft, hoe scherper en gedetailleerder het beeld kan zijn.</p>
         <p>Bijvoorbeeld, een Full HD-scherm heeft een resolutie van 1920x1080 pixels, wat betekent dat het 1920 pixels in de breedte en 1080 pixels in de hoogte heeft, voor een totaal van meer dan 2 miljoen pixels.</p>
-    </section>
+    </section> <!-- Sectie met uitleg over pixels -->
     <section id="resolutie">
         <h2>Resolutie</h2>
         <p>Resolutie verwijst naar het aantal pixels dat een beeld bevat. Hoe hoger de resolutie, hoe meer details een beeld kan weergeven. Resolutie wordt meestal uitgedrukt in termen van breedte x hoogte, zoals 1920x1080 (Full HD) of 3840x2160 (4K).</p>
         <p>Hogere resoluties bieden meer details en scherpere beelden, maar vereisen ook meer rekenkracht en grotere bestandsformaten. Voor afdrukken is de resolutie ook belangrijk; meestal wordt dit uitgedrukt in dots per inch (dpi), waarbij hogere dpi-waarden resulteren in scherpere afdrukken.</p>
-    </section>
+    </section> <!-- Sectie met uitleg over resolutie -->
     <section class="color-mixer">
         <h2>Kleurenmixer</h2>
         <label for="red">Rood:</label>
@@ -135,11 +136,11 @@
         <label for="blue">Blauw:</label>
         <input type="range" id="blue" name="blue" min="0" max="255" value="128">
         <div class="color-output" id="color-output"></div>
-    </section>
+    </section> <!-- Sectie met een interactieve kleurenmixer -->
 </div>
 <footer>
     <p>&copy; 2024 Kleurmodellen. Alle rechten voorbehouden.</p>
-</footer>
+</footer> <!-- Voettekst van de pagina -->
 <script>
     const redInput = document.getElementById('red');
     const greenInput = document.getElementById('green');
@@ -151,13 +152,13 @@
         const green = greenInput.value;
         const blue = blueInput.value;
         colorOutput.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
-    }
+    } /* Functie om de achtergrondkleur van het kleuroutput-element bij te werken op basis van de ingevoerde RGB-waarden */
 
     redInput.addEventListener('input', updateColor);
     greenInput.addEventListener('input', updateColor);
     blueInput.addEventListener('input', updateColor);
 
-    updateColor();
-</script>
+    updateColor(); /* Update de kleur onmiddellijk bij het laden van de pagina */
+</script> <!-- JavaScript om de kleurmixer interactief te maken -->
 </body>
 </html>
