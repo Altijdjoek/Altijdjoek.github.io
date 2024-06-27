@@ -1,44 +1,44 @@
-<!DOCTYPE html>
-<html lang="nl">
+<!DOCTYPE html> <!-- Geeft aan dat dit een HTML5-document is -->
+<html lang="nl"> <!-- Geeft aan dat de taal van het document Nederlands is -->
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Werking van de Computer</title>
+<meta charset="UTF-8"> <!-- Stelt de tekenset in op UTF-8, zodat alle tekens correct worden weergegeven -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Maakt de pagina responsief voor verschillende schermgroottes -->
+<title>Werking van de Computer</title> <!-- Titel van de webpagina die in de browserbalk wordt weergegeven -->
 <style>
     body {
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
         background-color: #f4f4f4;
-    }
+    } /* Stelt de algemene stijl van de body in, inclusief lettertype, marges, opvulling en achtergrondkleur */
     header {
         background-color: #4CAF50;
         color: white;
         padding: 1em 0;
         text-align: center;
         animation: headerAnimation 2s ease-in-out;
-    }
+    } /* Stelt de stijl van de header in, inclusief achtergrondkleur, tekstkleur, opvulling, tekstuitlijning en een animatie */
     @keyframes headerAnimation {
         from {background-color: #3e8e41;}
         to {background-color: #4CAF50;}
-    }
+    } /* Definieert de animatie voor de header, waarbij de achtergrondkleur geleidelijk verandert */
     nav {
         background-color: #333;
         overflow: hidden;
         animation: navAnimation 1s ease-in-out;
-    }
+    } /* Stelt de stijl van het navigatiegedeelte in, inclusief achtergrondkleur, overloop en een animatie */
     @keyframes navAnimation {
         from {margin-left: -100px;}
         to {margin-left: 0;}
-    }
+    } /* Definieert de animatie voor de navigatie, waarbij deze van links naar rechts in beeld schuift */
     nav ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
-    }
+    } /* Verwijdert de standaardlijststijlen, marges en opvulling voor de ongeordende lijst in de navigatie */
     nav ul li {
         float: left;
-    }
+    } /* Laat elk lijstitem in de navigatie horizontaal naast elkaar uitlijnen */
     nav ul li a {
         display: block;
         color: white;
@@ -46,19 +46,19 @@
         padding: 14px 16px;
         text-decoration: none;
         transition: background-color 0.3s;
-    }
+    } /* Stelt de stijl van de navigatielinks in, inclusief kleur, uitlijning, opvulling, geen onderstreping en een overgangseffect voor de achtergrondkleur */
     nav ul li a:hover {
         background-color: #111;
-    }
+    } /* Verandert de achtergrondkleur van de links bij hover */
     .main {
         padding: 20px;
         text-align: center;
         animation: fadeIn 1.5s forwards;
-    }
+    } /* Stelt de opvulling en tekstuitlijning van het hoofdgedeelte in, en voegt een fade-in animatie toe */
     @keyframes fadeIn {
         from {opacity: 0;}
         to {opacity: 1;}
-    }
+    } /* Definieert de fade-in animatie */
     .content {
         max-width: 800px;
         margin: 0 auto;
@@ -67,7 +67,7 @@
         padding: 20px;
         box-shadow: 0 0 10px rgba(0,0,0,0.1);
         border-radius: 8px;
-    }
+    } /* Stelt de stijl van de contentcontainer in, inclusief maximale breedte, automatische marges, tekstuitlijning, achtergrondkleur, opvulling, schaduw en afgeronde hoeken */
     .section-container {
         margin-bottom: 20px;
         padding: 20px;
@@ -75,34 +75,34 @@
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0,0,0,0.1);
         animation: slideIn 1s forwards;
-    }
+    } /* Stelt de stijl van de sectiecontainers in, inclusief marge, opvulling, achtergrondkleur, afgeronde hoeken, schaduw en een slide-in animatie */
     @keyframes slideIn {
         from {transform: translateY(20px); opacity: 0;}
         to {transform: translateY(0); opacity: 1;}
-    }
+    } /* Definieert de slide-in animatie */
     .image-container {
         text-align: center;
         margin-top: 20px;
         animation: fadeInImage 1.5s forwards;
-    }
+    } /* Stelt de stijl van de afbeeldingscontainer in, inclusief tekstuitlijning, marge bovenaan en een fade-in animatie */
     .image-container img {
         width: 50%;
         height: auto;
         border-radius: 8px;
-    }
+    } /* Stelt de stijl van de afbeeldingen in, inclusief breedte, hoogte en afgeronde hoeken */
     @keyframes fadeInImage {
         from {opacity: 0;}
         to {opacity: 1;}
-    }
+    } /* Definieert de fade-in animatie voor de afbeelding */
     .interactive-quiz {
         margin-top: 20px;
-    }
+    } /* Stelt de marge bovenaan voor de interactieve quiz in */
     .quiz-question {
         margin-bottom: 10px;
-    }
+    } /* Stelt de marge onder de quizvragen in */
     .quiz-question input[type="radio"] {
         margin-right: 10px;
-    }
+    } /* Stelt de marge-rechts in voor de radio-inputs van de quiz */
     .submit-btn {
         margin-top: 10px;
         padding: 10px 20px;
@@ -112,17 +112,17 @@
         border-radius: 4px;
         cursor: pointer;
         transition: background-color 0.3s;
-    }
+    } /* Stelt de stijl van de verzendknop in, inclusief marge, opvulling, achtergrondkleur, tekstkleur, geen rand, afgeronde hoeken, cursorstijl en een overgangseffect voor de achtergrondkleur */
     .submit-btn:hover {
         background-color: #45a049;
-    }
+    } /* Verandert de achtergrondkleur van de verzendknop bij hover */
     .result {
         margin-top: 20px;
         padding: 10px;
         background-color: #e7f3e7;
         border-left: 5px solid #4CAF50;
         display: none;
-    }
+    } /* Stelt de stijl van het resultaatgedeelte in, inclusief marge, opvulling, achtergrondkleur, linkerrand en standaard verborgen weergave */
     footer {
         background-color: #333;
         color: white;
@@ -130,7 +130,7 @@
         padding: 10px 0;
         position: relative;
         width: 100%;
-    }
+    } /* Stelt de stijl van de voettekst in, inclusief achtergrondkleur, tekstkleur, tekstuitlijning, opvulling, positionering en breedte */
 </style>
 <script>
     function checkAnswers() {
@@ -153,13 +153,13 @@
 
         resultContainer.textContent = resultText;
         resultContainer.style.display = "block";
-    }
+    } /* JavaScript-functie om de antwoorden van de quiz te controleren en het resultaat weer te geven */
 </script>
 </head>
 <body>
 <header>
     <h1>Werking van de Computer</h1>
-</header>
+</header> <!-- Header van de pagina met een titel -->
 <nav>
     <ul>
         <li><a href="index.html">Home</a></li>
@@ -169,28 +169,28 @@
         <li><a href="werking.van.de.computer.html">Werking van de Computer</a></li>
         <li><a href="Compressietechnieken.html">Compressietechnieken</a></li>
     </ul>
-</nav>
+</nav> <!-- Navigatiemenu met links naar verschillende pagina's -->
 <div class="main">
     <div class="content">
         <div class="section-container">
             <h2>Invoer</h2>
             <p>Invoer verwijst naar alle gegevens en instructies die de computer ontvangt van invoerapparaten zoals toetsenborden, muizen, scanners, enz. Het is het eerste proces in de cyclus van computerwerking. Invoerapparaten zetten fysieke acties of gegevens om in een formaat dat de computer kan verwerken.</p>
-        </div>
+        </div> <!-- Sectie met informatie over invoer -->
         <div class="section-container">
             <h2>Verwerking</h2>
             <p>Verwerking is het kernproces waarbij de CPU (Central Processing Unit) de ingevoerde gegevens interpreteert en berekeningen uitvoert of instructies volgt om een resultaat te genereren. De CPU fungeert als het 'brein' van de computer, waarbij het gegevens verwerkt door middel van logische en rekenkundige operaties.</p>
-        </div>
+        </div> <!-- Sectie met informatie over verwerking -->
         <div class="section-container">
             <h2>Uitvoer</h2>
             <p>Uitvoer is het proces waarbij de computer resultaten of gegevens levert aan uitvoerapparaten zoals monitoren, printers, luidsprekers, enz. Het is de laatste stap in de verwerking van gegevens. Uitvoerapparaten zetten de digitale informatie om in een voor de gebruiker begrijpelijk formaat, zoals tekst, beeld of geluid.</p>
-        </div>
+        </div> <!-- Sectie met informatie over uitvoer -->
         <div class="section-container">
             <h2>Opslag</h2>
             <p>Opslag verwijst naar het bewaren van gegevens en instructies op opslagmedia zoals harde schijven, SSD's, USB-sticks, en cloudopslag. Het stelt de computer in staat om gegevens voor lange termijn op te slaan en op te halen. Er zijn twee hoofdtypen opslag: primaire opslag (zoals RAM) die snel toegankelijk is maar vluchtig, en secundaire opslag (zoals harde schijven) die permanent is.</p>
-        </div>
+        </div> <!-- Sectie met informatie over opslag -->
         <div class="image-container">
             <img src="afbeelding4.jpg" alt="Prachtig uitzicht">
-        </div>
+        </div> <!-- Sectie met een afbeelding -->
         <div class="section-container interactive-quiz">
             <h2>Test je kennis</h2>
             <div class="quiz-question">
@@ -201,7 +201,7 @@
                 <label for="q1a2">Het verwerken van gegevens</label><br>
                 <input type="radio" id="q1a3" name="q1" value="Het weergeven van uitvoer">
                 <label for="q1a3">Het weergeven van uitvoer</label>
-            </div>
+            </div> <!-- Eerste quizvraag -->
             <div class="quiz-question">
                 <p>2. Welk apparaat wordt gebruikt voor de invoer van gegevens?</p>
                 <input type="radio" id="q2a1" name="q2" value="Monitor">
@@ -210,7 +210,7 @@
                 <label for="q2a2">Printer</label><br>
                 <input type="radio" id="q2a3" name="q2" value="Toetsenbord">
                 <label for="q2a3">Toetsenbord</label>
-            </div>
+            </div> <!-- Tweede quizvraag -->
             <div class="quiz-question">
                 <p>3. Wat is een voorbeeld van secundaire opslag?</p>
                 <input type="radio" id="q3a1" name="q3" value="RAM">
@@ -219,14 +219,14 @@
                 <label for="q3a2">Harde schijf</label><br>
                 <input type="radio" id="q3a3" name="q3" value="CPU">
                 <label for="q3a3">CPU</label>
-            </div>
-            <button class="submit-btn" onclick="checkAnswers()">Indienen</button>
-            <div class="result"></div>
+            </div> <!-- Derde quizvraag -->
+            <button class="submit-btn" onclick="checkAnswers()">Indienen</button> <!-- Verzendknop voor de quiz -->
+            <div class="result"></div> <!-- Container voor het weergeven van het resultaat van de quiz -->
         </div>
     </div>
 </div>
 <footer>
     <p>&copy; 2024 Werking van de Computer. Alle rechten voorbehouden.</p>
-</footer>
+</footer> <!-- Voettekst met copyrightinformatie -->
 </body>
 </html>
